@@ -11,22 +11,14 @@ import TheTheme
 
 class RootViewController: UIViewController {
     
-    var theme = StandardTheme()
+    private var theme: Theme = StandardTheme()
     
     lazy var tabBar: UITabBarController = {
         let tabBarController = UITabBarController()
         
-        let theme = ThemeViewController()
-        let navTheme = UINavigationController(rootViewController: theme)
-        navTheme.tabBarItem = UITabBarItem(title: .tabBarItemTheme, image: nil, selectedImage: nil)
-        navTheme.navigationBar.prefersLargeTitles = true
-
-        let about = AboutViewController()
-        let navAbout = UINavigationController(rootViewController: about)
-        navAbout.tabBarItem = UITabBarItem(title: .tabBarItemAbout, image: nil, selectedImage: nil)
-        navAbout.navigationBar.prefersLargeTitles = true
-        
-        tabBarController.setViewControllers([navTheme, navAbout], animated: false)
+        let themeTab = makeThemeTab()
+        let aboutTab = makeAboutTab()
+        tabBarController.setViewControllers([themeTab, aboutTab], animated: false)
         return tabBarController
     }()
     
@@ -37,6 +29,27 @@ class RootViewController: UIViewController {
         add(child: tabBar)
     }
 
+}
+
+fileprivate extension RootViewController {
+    func makeThemeTab() -> UINavigationController {
+        let themeViewController = ThemeViewController(theme: theme)
+        let navTheme = UINavigationController(rootViewController: themeViewController)
+        navTheme.tabBarItem = UITabBarItem(title: .tabBarItemTheme, image: nil, selectedImage: nil)
+        navTheme.navigationBar.prefersLargeTitles = true
+        return navTheme
+    }
+    
+    func makeAboutTab() -> UINavigationController {
+        let aboutViewController = AboutViewController()
+        let navAbout = UINavigationController(rootViewController: aboutViewController)
+        navAbout.tabBarItem = UITabBarItem(title: .tabBarItemAbout, image: nil, selectedImage: nil)
+        navAbout.navigationBar.prefersLargeTitles = true
+        return navAbout
+    }
+}
+
+fileprivate extension RootViewController {
     func add(child viewController: UIViewController) {
         addChild(viewController)
         view.addSubview(viewController.view)

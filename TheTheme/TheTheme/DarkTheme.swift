@@ -9,7 +9,9 @@
 import Foundation
 
 public struct DarkTheme: Theme {
-    public let window = ThemeWindow()
+    public let name: String = "Dark"
+    
+    public let main: ThemeMain
     
     public let tabBar: ThemeTabBar
     
@@ -18,12 +20,18 @@ public struct DarkTheme: Theme {
     public let tableView = ThemeTableView()
     
     public init() {
+        main = DarkTheme.makeThemeMain()
         tabBar = DarkTheme.makeThemeTabBar()
         navigationBar = DarkTheme.makeThemeNavigationBar()
     }
 }
 
 fileprivate extension DarkTheme {
+    static func makeThemeMain() -> ThemeMain {
+        var builder =  ThemeMainBuilder()
+        return builder.set(backgroundColor: .black).build()
+    }
+
     static func makeThemeTabBar() -> ThemeTabBar {
         var builder =  ThemeTabBarBuilder()
         return builder.set(barStyle: .black).build()

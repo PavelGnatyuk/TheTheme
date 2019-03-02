@@ -15,6 +15,7 @@
 		AF5313F0222A9A7B00EFA7F2 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313EC222A9A7B00EFA7F2 /* DarkTheme.swift */; };
 		AF5313F1222A9A7B00EFA7F2 /* StandardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */; };
 		AF5313F2222A9A7B00EFA7F2 /* Theme+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */; };
+		AF6D74B2222ABDA000736B4F /* UIWindow+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		AF5313EC222A9A7B00EFA7F2 /* DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTheme.swift; sourceTree = "<group>"; };
 		AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Theme+Load.swift"; sourceTree = "<group>"; };
+		AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Reload.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */,
 				AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */,
 				AF5313EC222A9A7B00EFA7F2 /* DarkTheme.swift */,
+				AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */,
 				AF531397222A70A700EFA7F2 /* Info.plist */,
 			);
 			path = TheTheme;
@@ -214,6 +217,7 @@
 				AF5313F0222A9A7B00EFA7F2 /* DarkTheme.swift in Sources */,
 				AF5313F1222A9A7B00EFA7F2 /* StandardTheme.swift in Sources */,
 				AF5313EA222A9A2C00EFA7F2 /* Theme.swift in Sources */,
+				AF6D74B2222ABDA000736B4F /* UIWindow+Reload.swift in Sources */,
 				AF5313F2222A9A7B00EFA7F2 /* Theme+Load.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

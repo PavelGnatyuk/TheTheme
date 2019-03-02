@@ -17,6 +17,8 @@
 		AF5313F5222A9B2C00EFA7F2 /* TheTheme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5313F3222A9B2C00EFA7F2 /* TheTheme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF5313F8222AA29B00EFA7F2 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313F7222AA29B00EFA7F2 /* ThemeViewController.swift */; };
 		AF5313FA222AA33400EFA7F2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313F9222AA33400EFA7F2 /* AboutViewController.swift */; };
+		AF6D74AE222AAC4500736B4F /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D74AD222AAC4500736B4F /* ThemeView.swift */; };
+		AF6D74B0222AB60900736B4F /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D74AF222AB60900736B4F /* Themes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		AF5313F3222A9B2C00EFA7F2 /* TheTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TheTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5313F7222AA29B00EFA7F2 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		AF5313F9222AA33400EFA7F2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		AF6D74AD222AAC4500736B4F /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		AF6D74AF222AB60900736B4F /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				AF5313B9222A712D00EFA7F2 /* AppDelegate.swift */,
 				AF5313E7222A98E400EFA7F2 /* RootViewController.swift */,
 				AF5313F7222AA29B00EFA7F2 /* ThemeViewController.swift */,
+				AF6D74AD222AAC4500736B4F /* ThemeView.swift */,
+				AF6D74AF222AB60900736B4F /* Themes.swift */,
 				AF5313F9222AA33400EFA7F2 /* AboutViewController.swift */,
 				AF5313C0222A712D00EFA7F2 /* Assets.xcassets */,
 				AF5313C2222A712D00EFA7F2 /* LaunchScreen.storyboard */,
@@ -279,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5313F8222AA29B00EFA7F2 /* ThemeViewController.swift in Sources */,
+				AF6D74B0222AB60900736B4F /* Themes.swift in Sources */,
 				AF5313BA222A712D00EFA7F2 /* AppDelegate.swift in Sources */,
 				AF5313FA222AA33400EFA7F2 /* AboutViewController.swift in Sources */,
+				AF6D74AE222AAC4500736B4F /* ThemeView.swift in Sources */,
 				AF5313E8222A98E400EFA7F2 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

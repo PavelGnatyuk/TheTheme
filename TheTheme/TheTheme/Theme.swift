@@ -9,15 +9,19 @@
 import Foundation
 
 public protocol Theme {
-    var window: ThemeWindow { get }
+    var name: String { get }
+    var main: ThemeMain { get }
     var tabBar: ThemeTabBar { get }
     var navigationBar: ThemeNavigationBar { get }
     var tableView: ThemeTableView { get }
 }
 
-public struct ThemeWindow {
+public struct ThemeMain {
     /// Global tintColor
-    var tintColor: UIColor?
+    public var tintColor: UIColor?
+    
+    /// Background for the window and view controllers
+    public var backgroundColor: UIColor = .white
 }
 
 public struct ThemeTabBar {
@@ -41,15 +45,20 @@ public struct ThemeTableView {
     var backgroundColor: UIColor?
 }
 
-struct ThemeWindowBuilder {
-    private var theme = ThemeWindow()
+struct ThemeMainBuilder {
+    private var theme = ThemeMain()
     
-    mutating func set(tintColor: UIColor) -> ThemeWindowBuilder {
+    mutating func set(tintColor: UIColor) -> ThemeMainBuilder {
         theme.tintColor = tintColor
         return self
     }
-    
-    func build() -> ThemeWindow {
+
+    mutating func set(backgroundColor: UIColor) -> ThemeMainBuilder {
+        theme.backgroundColor = backgroundColor
+        return self
+    }
+
+    func build() -> ThemeMain {
         return theme
     }
 }

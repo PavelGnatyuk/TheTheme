@@ -10,19 +10,24 @@ import UIKit
 
 public extension Theme {
     func apply(for application: UIApplication) {
-        applyWindow(for: application)
+        applyMain(for: application)
         applyTabBar()
         applyNavigationBar()
         applyTableView()
+        
+        application.windows.reload()
     }
 }
 
 private extension Theme {
-    func applyWindow(for application: UIApplication) {
-        guard let tintColor = window.tintColor else {
-            return
+    func applyMain(for application: UIApplication) {
+        if let tintColor = main.tintColor {
+            application.windows.forEach {
+                $0.tintColor = tintColor
+            }
         }
-        application.windows.forEach { $0.tintColor = tintColor }
+        
+        UIView.appearance().backgroundColor = main.backgroundColor
     }
     
     func applyTabBar() {

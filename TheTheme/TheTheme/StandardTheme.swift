@@ -9,7 +9,9 @@
 import Foundation
 
 public struct StandardTheme: Theme {
-    public var window = ThemeWindow()
+    public let  name: String = "Standard"
+    
+    public var main = ThemeMain()
     
     public let tabBar = ThemeTabBar()
     
