@@ -6,7 +6,8 @@
 //  Copyright © 2019 Pavel Gnatyuk. All rights reserved.
 //
 
-import Foundation
+import UIKit.UIColor
+import UIKit.UIBarCommon
 
 public protocol Theme {
     var name: String { get }
