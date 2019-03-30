@@ -10,6 +10,7 @@
 		AF2DBA2B224FC6960064C90B /* ThemedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DBA28224FC6960064C90B /* ThemedTextView.swift */; };
 		AF2DBA2C224FC6960064C90B /* ThemedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DBA29224FC6960064C90B /* ThemedTextField.swift */; };
 		AF2DBA2D224FC6960064C90B /* ThemedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DBA2A224FC6960064C90B /* ThemedLabel.swift */; };
+		AF2DBA2F224FC7B10064C90B /* ThemeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DBA2E224FC7B10064C90B /* ThemeBuilder.swift */; };
 		AF53139D222A70A700EFA7F2 /* TheTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF531393222A70A700EFA7F2 /* TheTheme.framework */; };
 		AF5313A2222A70A700EFA7F2 /* TheThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313A1222A70A700EFA7F2 /* TheThemeTests.swift */; };
 		AF5313A4222A70A700EFA7F2 /* TheTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = AF531396222A70A700EFA7F2 /* TheTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,7 @@
 		AF2DBA28224FC6960064C90B /* ThemedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedTextView.swift; sourceTree = "<group>"; };
 		AF2DBA29224FC6960064C90B /* ThemedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedTextField.swift; sourceTree = "<group>"; };
 		AF2DBA2A224FC6960064C90B /* ThemedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedLabel.swift; sourceTree = "<group>"; };
+		AF2DBA2E224FC7B10064C90B /* ThemeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBuilder.swift; sourceTree = "<group>"; };
 		AF531393222A70A700EFA7F2 /* TheTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TheTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF531396222A70A700EFA7F2 /* TheTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheTheme.h; sourceTree = "<group>"; };
 		AF531397222A70A700EFA7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				AF531396222A70A700EFA7F2 /* TheTheme.h */,
 				AF5313E9222A9A2C00EFA7F2 /* Theme.swift */,
+				AF2DBA2E224FC7B10064C90B /* ThemeBuilder.swift */,
 				AF5313EB222A9A7B00EFA7F2 /* Theme+Apply.swift */,
 				AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */,
 				AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */,
@@ -229,6 +232,7 @@
 				AF5313F0222A9A7B00EFA7F2 /* DarkTheme.swift in Sources */,
 				AF2DBA2B224FC6960064C90B /* ThemedTextView.swift in Sources */,
 				AF5313F1222A9A7B00EFA7F2 /* StandardTheme.swift in Sources */,
+				AF2DBA2F224FC7B10064C90B /* ThemeBuilder.swift in Sources */,
 				AF2DBA2D224FC6960064C90B /* ThemedLabel.swift in Sources */,
 				AF5313EA222A9A2C00EFA7F2 /* Theme.swift in Sources */,
 				AF6D74B2222ABDA000736B4F /* UIWindow+Reload.swift in Sources */,

@@ -31,7 +31,7 @@ public struct StandardTheme: Theme {
 
 fileprivate extension StandardTheme {
     static func makeThemeMain() -> ThemeMain {
-        return ThemeMainBuilder().set(backgroundColor: .white).build()
+        return ThemeMainBuilder().set(backgroundColor: .yellow).build()
     }
 
     static func makeThemeLabel() -> ThemeLabel {
