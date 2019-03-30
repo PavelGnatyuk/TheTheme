@@ -19,6 +19,12 @@ public struct DarkTheme: Theme {
     
     public let tableView = ThemeTableView()
     
+    public let label = ThemeLabel()
+
+    public let textField = ThemeTextField()
+    
+    public let textView = ThemeTextView()
+    
     public init() {
         main = DarkTheme.makeThemeMain()
         tabBar = DarkTheme.makeThemeTabBar()
@@ -28,17 +34,14 @@ public struct DarkTheme: Theme {
 
 fileprivate extension DarkTheme {
     static func makeThemeMain() -> ThemeMain {
-        var builder =  ThemeMainBuilder()
-        return builder.set(backgroundColor: .black).build()
+        return ThemeMainBuilder().set(backgroundColor: .black).build()
     }
 
     static func makeThemeTabBar() -> ThemeTabBar {
-        var builder =  ThemeTabBarBuilder()
-        return builder.set(barStyle: .black).build()
+        return ThemeTabBarBuilder().set(barStyle: .black).build()
     }
     
     static func makeThemeNavigationBar() -> ThemeNavigationBar {
-        var builder = ThemeNavigationBarBuilder()
-        return builder.set(barStyle: .black).build()
+        return ThemeNavigationBarBuilder().set(barStyle: .black).build()
     }
 }

@@ -15,6 +15,9 @@ public protocol Theme {
     var tabBar: ThemeTabBar { get }
     var navigationBar: ThemeNavigationBar { get }
     var tableView: ThemeTableView { get }
+    var label: ThemeLabel { get }
+    var textField: ThemeTextField { get }
+    var textView: ThemeTextView { get }
 }
 
 public struct ThemeMain {
@@ -23,6 +26,7 @@ public struct ThemeMain {
     
     /// Background for the window and view controllers
     public var backgroundColor: UIColor = .white
+    
 }
 
 public struct ThemeTabBar {
@@ -46,15 +50,33 @@ public struct ThemeTableView {
     var backgroundColor: UIColor?
 }
 
-struct ThemeMainBuilder {
+public struct ThemeLabel {
+    var textColor: UIColor?
+    var font: UIFont?
+    var backgroundColor: UIColor?
+}
+
+public struct ThemeTextField {
+    var textColor: UIColor?
+    var font: UIFont?
+    var backgroundColor: UIColor?
+}
+
+public struct ThemeTextView {
+    var backgroundColor: UIColor?
+    var font: UIFont?
+    var textColor: UIColor?
+}
+
+class ThemeMainBuilder {
     private var theme = ThemeMain()
     
-    mutating func set(tintColor: UIColor) -> ThemeMainBuilder {
+    func set(tintColor: UIColor) -> ThemeMainBuilder {
         theme.tintColor = tintColor
         return self
     }
 
-    mutating func set(backgroundColor: UIColor) -> ThemeMainBuilder {
+    func set(backgroundColor: UIColor) -> ThemeMainBuilder {
         theme.backgroundColor = backgroundColor
         return self
     }
@@ -64,30 +86,30 @@ struct ThemeMainBuilder {
     }
 }
 
-struct ThemeTabBarBuilder {
+class ThemeTabBarBuilder {
     private var theme = ThemeTabBar()
     
-    mutating func set(barStyle: UIBarStyle) -> ThemeTabBarBuilder {
+    func set(barStyle: UIBarStyle) -> ThemeTabBarBuilder {
         theme.barStyle = barStyle
         return self
     }
     
-    mutating func set(tintColor: UIColor) -> ThemeTabBarBuilder {
+    func set(tintColor: UIColor) -> ThemeTabBarBuilder {
         theme.tintColor = tintColor
         return self
     }
     
-    mutating func set(barTintColor: UIColor) -> ThemeTabBarBuilder {
+    func set(barTintColor: UIColor) -> ThemeTabBarBuilder {
         theme.barTintColor = barTintColor
         return self
     }
     
-    mutating func set(unselectedTintColor: UIColor) -> ThemeTabBarBuilder {
+    func set(unselectedTintColor: UIColor) -> ThemeTabBarBuilder {
         theme.unselectedTintColor = unselectedTintColor
         return self
     }
     
-    mutating func set(backgroundColor: UIColor) -> ThemeTabBarBuilder {
+    func set(backgroundColor: UIColor) -> ThemeTabBarBuilder {
         theme.backgroundColor = backgroundColor
         return self
     }
@@ -97,20 +119,20 @@ struct ThemeTabBarBuilder {
     }
 }
 
-struct ThemeNavigationBarBuilder {
+class ThemeNavigationBarBuilder {
     private var theme = ThemeNavigationBar()
     
-    mutating func set(barStyle: UIBarStyle) -> ThemeNavigationBarBuilder {
+    func set(barStyle: UIBarStyle) -> ThemeNavigationBarBuilder {
         theme.barStyle = barStyle
         return self
     }
     
-    mutating func set(barTintColor: UIColor) -> ThemeNavigationBarBuilder {
+    func set(barTintColor: UIColor) -> ThemeNavigationBarBuilder {
         theme.barTintColor = barTintColor
         return self
     }
     
-    mutating func set(backgroundColor: UIColor) -> ThemeNavigationBarBuilder {
+    func set(backgroundColor: UIColor) -> ThemeNavigationBarBuilder {
         theme.backgroundColor = backgroundColor
         return self
     }
@@ -120,15 +142,74 @@ struct ThemeNavigationBarBuilder {
     }
 }
 
-struct ThemeTableViewBuilder {
+class ThemeTableViewBuilder {
     private var theme = ThemeTableView()
     
-    mutating func set(backgroundColor: UIColor) -> ThemeTableViewBuilder {
+    func set(backgroundColor: UIColor) -> ThemeTableViewBuilder {
         theme.backgroundColor = backgroundColor
         return self
     }
     
     func build() -> ThemeTableView {
+        return theme
+    }
+}
+
+class ThemeLabelBuilder {
+    private var theme = ThemeLabel()
+    
+    func set(textColor: UIColor) -> Self {
+        theme.textColor = textColor
+        return self
+    }
+    
+    func set(font: UIFont) -> Self {
+        theme.font = font
+        return self
+    }
+    
+    func set(backgroundColor: UIColor) -> Self {
+        theme.backgroundColor = backgroundColor
+        return self
+    }
+
+    func build() -> ThemeLabel {
+        return theme
+    }
+}
+
+class ThemeTextFieldBuilder {
+    private var theme = ThemeTextField()
+    
+    func set(textColor: UIColor) -> ThemeTextFieldBuilder {
+        theme.textColor = textColor
+        return self
+    }
+    
+    func set(backgroundColor: UIColor) -> ThemeTextFieldBuilder {
+        theme.backgroundColor = backgroundColor
+        return self
+    }
+    
+    func build() -> ThemeTextField {
+        return theme
+    }
+}
+
+class ThemeTextViewBuilder {
+    private var theme = ThemeTextView()
+    
+    func set(backgroundColor: UIColor) -> ThemeTextViewBuilder {
+        theme.backgroundColor = backgroundColor
+        return self
+    }
+    
+    func set(textColor: UIColor) -> ThemeTextViewBuilder {
+        theme.textColor = textColor
+        return self
+    }
+
+    func build() -> ThemeTextView {
         return theme
     }
 }

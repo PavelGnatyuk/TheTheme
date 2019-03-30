@@ -14,6 +14,9 @@ public extension Theme {
         applyTabBar()
         applyNavigationBar()
         applyTableView()
+        applyLabel()
+        applyTextField()
+        applyTextView()
         
         application.windows.reload()
     }
@@ -26,8 +29,6 @@ private extension Theme {
                 $0.tintColor = tintColor
             }
         }
-        
-        UIView.appearance().backgroundColor = main.backgroundColor
     }
     
     func applyTabBar() {
@@ -65,6 +66,33 @@ private extension Theme {
     func applyTableView() {
         if let backgroundColor = tableView.backgroundColor {
             UITableView.appearance().backgroundColor = backgroundColor
+        }
+    }
+
+    func applyLabel() {
+        if let textColor = label.textColor {
+            UILabel.appearance().textColor = textColor
+        }
+        if let backgroundColor = label.backgroundColor {
+            UILabel.appearance().backgroundColor = backgroundColor
+        }
+    }
+
+    func applyTextField() {
+        if let textColor = textField.textColor {
+            UITextField.appearance().textColor = textColor
+        }
+        if let backgroundColor = textField.backgroundColor {
+            UITextField.appearance().backgroundColor = backgroundColor
+        }
+    }
+    
+    func applyTextView() {
+        if let backgroundColor = textView.backgroundColor {
+            UITextView.appearance().backgroundColor = backgroundColor
+        }
+        if let textColor = textField.textColor {
+            UITextView.appearance().textColor = textColor
         }
     }
 }
