@@ -9,6 +9,8 @@
 import UIKit
 
 public class ThemedTextField: UITextField {
+    
+    private var _doneAccessory: Bool = true
 
     public init() {
         super.init(frame: CGRect.zero)
@@ -18,10 +20,43 @@ public class ThemedTextField: UITextField {
         self.adjustsFontForContentSizeCategory = true
         self.borderStyle = .roundedRect
         self.translatesAutoresizingMaskIntoConstraints = false
+        addDoneButtonOnKeyboard()
     }
     
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("Not implemented")
     }
+    
+    var doneAccessory: Bool {
+        get {
+            return _doneAccessory
+        }
+        set (done) {
+            _doneAccessory = done
+            if done {
+                addDoneButtonOnKeyboard()
+            }
+        }
+    }
+}
+
+fileprivate extension ThemedTextField {
+    func addDoneButtonOnKeyboard() {
+        let toolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        toolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: .barItemDone, style: .done, target: self, action: #selector(resignFirstResponder))
+        
+        let items = [flexSpace, done]
+        toolbar.items = items
+        toolbar.sizeToFit()
+        
+        inputAccessoryView = toolbar
+    }
+}
+
+fileprivate extension String {
+    static let barItemDone: String  = "Done"
 }
