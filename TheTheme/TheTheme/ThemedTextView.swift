@@ -12,7 +12,8 @@ public class ThemedTextView: UITextView {
 
     public init() {
         super.init(frame: CGRect.zero, textContainer: nil)
-        self.textColor = UILabel.appearance().textColor
+        self.textColor = UITextView.appearance().textColor
+        self.backgroundColor = UITextView.appearance().backgroundColor
         self.font = .preferredFont(forTextStyle: .body)
         self.adjustsFontForContentSizeCategory = true
         self.translatesAutoresizingMaskIntoConstraints = false

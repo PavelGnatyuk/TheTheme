@@ -13,6 +13,7 @@ public class ThemedLabel: UILabel {
     public init() {
         super.init(frame: CGRect.zero)
         self.textColor = UILabel.appearance().textColor
+        self.backgroundColor = UILabel.appearance().backgroundColor
         self.font = .preferredFont(forTextStyle: .body)
         self.adjustsFontForContentSizeCategory = true
         self.translatesAutoresizingMaskIntoConstraints = false

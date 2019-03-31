@@ -12,7 +12,8 @@ public class ThemedTextField: UITextField {
 
     public init() {
         super.init(frame: CGRect.zero)
-        self.textColor = UILabel.appearance().textColor
+        self.textColor = UITextField.appearance().textColor
+        self.backgroundColor = UITextField.appearance().backgroundColor
         self.font = .preferredFont(forTextStyle: .body)
         self.adjustsFontForContentSizeCategory = true
         self.borderStyle = .roundedRect

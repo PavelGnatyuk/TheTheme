@@ -31,18 +31,18 @@ public struct StandardTheme: Theme {
 
 fileprivate extension StandardTheme {
     static func makeThemeMain() -> ThemeMain {
-        return ThemeMainBuilder().set(backgroundColor: .yellow).build()
+        return ThemeMainBuilder().set(backgroundColor: .white).build()
     }
 
     static func makeThemeLabel() -> ThemeLabel {
-        return ThemeLabelBuilder().set(textColor: .green).set(backgroundColor: .yellow).build()
+        return ThemeLabelBuilder().set(textColor: .darkText).set(backgroundColor: .clear).build()
     }
 
     static func makeThemeTextField() -> ThemeTextField {
-        return ThemeTextFieldBuilder().set(textColor: .blue).set(backgroundColor: .orange).build()
+        return ThemeTextFieldBuilder().set(textColor: .darkText).set(backgroundColor: .white).build()
     }
 
     static func makeThemeTextView() -> ThemeTextView {
-        return ThemeTextViewBuilder().set(backgroundColor: .lightGray).build()
+        return ThemeTextViewBuilder().set(backgroundColor: .groupTableViewBackground).build()
     }
 }
