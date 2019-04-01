@@ -20,6 +20,7 @@
 		AF5313F1222A9A7B00EFA7F2 /* StandardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */; };
 		AF5313F2222A9A7B00EFA7F2 /* Theme+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */; };
 		AF6D74B2222ABDA000736B4F /* UIWindow+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */; };
+		AF827B222251DB1E00CC9957 /* DoneAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF827B212251DB1E00CC9957 /* DoneAccessory.swift */; };
 		AFC04A0C222D042600BB3016 /* ThemeLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC04A0B222D042600BB3016 /* ThemeLoadingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		AF5313ED222A9A7B00EFA7F2 /* StandardTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTheme.swift; sourceTree = "<group>"; };
 		AF5313EE222A9A7B00EFA7F2 /* Theme+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Theme+Load.swift"; sourceTree = "<group>"; };
 		AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Reload.swift"; sourceTree = "<group>"; };
+		AF827B212251DB1E00CC9957 /* DoneAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneAccessory.swift; sourceTree = "<group>"; };
 		AF89C1802237E1C100C24014 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AFC04A0B222D042600BB3016 /* ThemeLoadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLoadingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 				AF6D74B1222ABDA000736B4F /* UIWindow+Reload.swift */,
 				AF2DBA2A224FC6960064C90B /* ThemedLabel.swift */,
 				AF2DBA29224FC6960064C90B /* ThemedTextField.swift */,
+				AF827B212251DB1E00CC9957 /* DoneAccessory.swift */,
 				AF2DBA28224FC6960064C90B /* ThemedTextView.swift */,
 				AF531397222A70A700EFA7F2 /* Info.plist */,
 			);
@@ -234,6 +237,7 @@
 				AF5313EF222A9A7B00EFA7F2 /* Theme+Apply.swift in Sources */,
 				AF5313F0222A9A7B00EFA7F2 /* DarkTheme.swift in Sources */,
 				AF2DBA2B224FC6960064C90B /* ThemedTextView.swift in Sources */,
+				AF827B222251DB1E00CC9957 /* DoneAccessory.swift in Sources */,
 				AF5313F1222A9A7B00EFA7F2 /* StandardTheme.swift in Sources */,
 				AF2DBA2F224FC7B10064C90B /* ThemeBuilder.swift in Sources */,
 				AF2DBA2D224FC6960064C90B /* ThemedLabel.swift in Sources */,
